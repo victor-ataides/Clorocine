@@ -1,0 +1,19 @@
+body{
+    background-color: #f5f5f5;
+}
+
+.nav-extended{
+    background-image: url("imagens/chadimagem.jpg");
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+nav ul li.active, .tab a.active {
+    border-bottom: solid 2px #fff;
+    background-color: transparent;
+
+}
+
+.nav-header h1{
+    text-shadow: 2px 2px 8px #000000;
+}
