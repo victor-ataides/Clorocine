@@ -6,8 +6,8 @@ $bd = new SQLite3("filmes.db");
 $sql = "SELECT * FROM filmes";
 $filmes = $bd->query ($sql);
     
-$filme1 = [
-    "titulo"=>"42 - A História de Uma Lenda",
+/*$filme1 = [
+/    "titulo"=>"42 - A História de Uma Lenda",
     "nota"=> 9.7,
     "sinopse"=> "Jackie Robinson é um jogador de baseball que disputa a liga nacional dos negros até ser recrutado por Branch Rickey, o executivo de um time que disputa a maior competição do esporte nos Estados Unidos. Rickey quer que Robinson seja o primeiro negro a disputar a Major League na era moderna, o que faz com que ambos tenham que enfrentar o racismo existente não apenas da torcida e da diretoria, mas também dentro dos campos.",
     "poster"=> "https://image.tmdb.org/t/p/w300/9A2dpwg2ywDEU4h7SIwPWCt7dUJ.jpg"
@@ -32,7 +32,7 @@ $filme4 = [
 ];
 
 $filmes = [$filme1, $filme2, $filme3, $filme4];
-
+*/
 ?>
 
 <body>
