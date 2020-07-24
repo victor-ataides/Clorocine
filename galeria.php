@@ -6,8 +6,8 @@ $bd = new SQLite3("filmes.db");
 $sql = "SELECT * FROM filmes";
 $filmes = $bd->query ($sql);
     
-/*$filme1 = [
-/    "titulo"=>"42 - A História de Uma Lenda",
+$filme1 = [
+  "titulo"=>"42 - A História de Uma Lenda",
     "nota"=> 9.7,
     "sinopse"=> "Jackie Robinson é um jogador de baseball que disputa a liga nacional dos negros até ser recrutado por Branch Rickey, o executivo de um time que disputa a maior competição do esporte nos Estados Unidos. Rickey quer que Robinson seja o primeiro negro a disputar a Major League na era moderna, o que faz com que ambos tenham que enfrentar o racismo existente não apenas da torcida e da diretoria, mas também dentro dos campos.",
     "poster"=> "https://image.tmdb.org/t/p/w300/9A2dpwg2ywDEU4h7SIwPWCt7dUJ.jpg"
@@ -31,15 +31,15 @@ $filme4 = [
 	"poster"=>"https://image.tmdb.org/t/p/w300/i4AWAMPxqNpYTvp0RXL4JSKg7hh.jpg"
 ];
 
-$filmes = [$filme1, $filme2, $filme3, $filme4];
-*/
+//$filmes = [$filme1, $filme2, $filme3, $filme4];
+
 ?>
 
 <body>
     <nav class="nav-extended blue-grey lighten-4">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
-                <li><a href="galeria.php">Galeria</a></li>
+                <li class="active"><a href="galeria.php">Galeria</a></li>
                 <li><a href="cadastrar.php">Cadastrar</a></li>
             </ul>
         </div>
@@ -55,11 +55,11 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
         </div>
     </nav>
 
+<div class="container">
     <div class="row">
 
-        <?php while ($filme = $filmes->fetchArray()): ?>
-
-            <div class="col s3">
+        <?php while ($filme = $filmes->fetchArray()) : ?>
+            <div class="col s12 m6 l3">
                 <div class="card hoverable">
                     <div class="card-image">
                         <img src="<?= $filme["poster"]?>">
@@ -72,13 +72,16 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
                         <i class="material-icons amber-text">star</i> <?= $filme["nota"]?>
                         </p>
                         <span class="card-title"><?= $filme["titulo"]?></span>
-                        <p><?= $filme["sinopse"]?></p>
+
+                        <p><?= $filme["sinopse"] ?></p>
                     </div>
                 </div>
             </div>
         <?php endwhile ?>
     </div>
 </div>
+
+
 </div>
 
 </body>
